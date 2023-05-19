@@ -1,24 +1,20 @@
+import { keys, options } from "@Config";
+import load from "../load";
 import { Client } from "tmi.js";
-import { config } from "dotenv";
-config();
+import Commands from "./commands";
 
-export default class BaseClient extends Client{
+export default class BaseClient extends Client {
+    public keys = keys;
+    public events = new load(this).all();
+    public commands = new Map<string, Commands>()
+
     constructor(){
-        super( 
-            {
-            options: {
-                debug: true,
-            },
-            identity:{
-                username: process.env.User,
-                password: process.env.Token
-            },
-            channels: [ process.env.User ]
-        }
-        );
+        super(options);
     };
 
     login(){
-        this.connect();
+        this.connect().catch((e)=>{
+            console.log(e)
+        });
     };
 };
