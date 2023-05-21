@@ -2,5 +2,6 @@ import BaseClient from "@Client";
 
 const client = new BaseClient();
 
-
-client.login();
+setTimeout(()=>{
+    client.login();
+}, 20000)

@@ -9,7 +9,7 @@ const options: Options = {
     },
     identity: {
         username: env.User,
-        password: env.Token
+        password: env.ClientSecret
     },
     channels: [env.User],
 };
@@ -17,6 +17,10 @@ const options: Options = {
 const keys = {
     prefix: env.Prefix ?? "!",
 };
+
+const TwitchApi = () => {
+    
+}
 
 export {
     options,

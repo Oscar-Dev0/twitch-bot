@@ -3,15 +3,17 @@
   "version": "0.0.1-alpha",
   "main": "src/index",
   "dependencies": {
+    "@twurple/api": "^6.2.0",
+    "@twurple/auth": "^6.2.0",
     "dotenv": "^16.0.3",
     "nodemon": "^2.0.22",
     "tmi.js": "^1.8.5",
     "tslib": "^2.5.0"
   },
   "devDependencies": {
-    "@types/tmi.js": "^1.8.3",
     "@types/module-alias": "^2.0.1",
     "@types/node": "^18.7.2",
+    "@types/tmi.js": "^1.8.3",
     "@types/ws": "^8.5.3",
     "module-alias": "^2.2.2",
     "nodemon": "^2.0.19",
